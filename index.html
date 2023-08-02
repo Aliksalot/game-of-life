@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of life</title>
+</head>
+<body>
+    <canvas id = 'canvas' width="800px" height="600px">
+
+    </canvas>
+
+    <script src = './script.js'></script>
+
+    <script>
+        const canvas = document.getElementById('canvas')
+        const context = canvas.getContext('2d')
+
+        window.addEventListener('click', mouseUp)
+
+        setInterval(draw, 100)
+        setInterval(execute, 3000)
+
+        start()
+    </script>
+    <span id = 'gens_span'></span>
+</body>
+</html>
