@@ -6,7 +6,7 @@
     <title>Game of life</title>
 </head>
 <body>
-    <canvas id = 'canvas' width="800px" height="600px">
+    <canvas id = 'canvas' width="600px" height="600px">
 
     </canvas>
 
@@ -17,12 +17,22 @@
         const context = canvas.getContext('2d')
 
         window.addEventListener('click', mouseUp)
+        window.addEventListener('keydown', keyDown)
 
-        setInterval(draw, 100)
-        setInterval(execute, 3000)
+        //setInterval(draw, 100)
+        setInterval(execute, 700)
 
         start()
+
     </script>
-    <span id = 'gens_span'></span>
+    <script>
+        
+
+    </script>
+    <div style = 'position: relative;margin-top: 5px; white-space: pre-line;'>
+        <span id = 'gens_span'>Generations: 0 </span>
+        <span id = 'pause'>paused</span>
+    </div>
+
 </body>
 </html>
